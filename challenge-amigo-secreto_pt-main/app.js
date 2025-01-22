@@ -36,8 +36,10 @@ function sortear() {
         return;
     }
 
-    let indiceSorteio = parseInt(Math.random() * listaParticipantes.length + 1);
-    let nomeSorteado = listaParticipantes[indiceSorteio]
+    let meuNome = listaParticipantes[0];
+    let indiceSorteio;
+    do {indiceSorteio = parseInt(Math.random() * listaParticipantes.length + 1)} while (listaParticipantes[indiceSorteio] === meuNome); 
 
+    let nomeSorteado = listaParticipantes[indiceSorteio];
     sorteado.innerHTML = `Seu amigo(a) secreto(a) é: ${nomeSorteado}`;
 }
