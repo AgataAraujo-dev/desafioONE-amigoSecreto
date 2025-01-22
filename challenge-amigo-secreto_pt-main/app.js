@@ -7,6 +7,11 @@ function adicionarParticipante() {
     if (nome === "") {
         alert('Por favor, insira um nome.');
         return;
+    }
+
+    if (listaParticipantes.includes(nome)) {
+        alert('O nome já está na lista.');
+        return;
     } else {
         listaParticipantes.push(nome);
         document.querySelector('input').value = "";
