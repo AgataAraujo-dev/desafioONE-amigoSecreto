@@ -16,6 +16,11 @@ function adicionarParticipante() {
         listaParticipantes.push(nome);
         document.querySelector('input').value = "";
         atualizarLista();
+
+        if (listaParticipantes.length >= 1) {
+            let titulo = document.querySelector('h2');
+            titulo.innerHTML = 'Agora o nome dos seus amigos';
+        }
     } 
 }
 
